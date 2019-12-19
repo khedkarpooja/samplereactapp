@@ -3,13 +3,13 @@ $primary-color: #fff;
 $secondary-color: blue;
 $border: 1px solid #ccc;
 $screen-width: 100vw;
-$text-color:#000;
-$drugs-sub-width:33.33%;
+$text-color: #000;
+$drugs-sub-width: 33.33%;
 $price-font: 30px;
-$border-0:0;
+$border-0: 0;
 
-$muted-color:#ccc;
- @mixin primary-text($text-color) {
+$muted-color: #ccc;
+@mixin primary-text($text-color) {
   color: $text-color;
 }
 
@@ -35,7 +35,6 @@ $muted-color:#ccc;
   @include flex-wrapper-center();
   padding: 5%;
   margin: 10px;
-  height: 100vh;
   overflow: hidden;
 
   .main {
@@ -67,9 +66,9 @@ $muted-color:#ccc;
       padding: 5px;
       box-sizing: border-box;
     }
-&:nth-child(odd){
-  border-left: $border-0;
-}
+    &:nth-child(odd) {
+      border-left: $border-0;
+    }
     @include drugs-container();
 
     .badge {
@@ -100,25 +99,21 @@ $muted-color:#ccc;
       .muted {
         color: $muted-color;
       }
-
     }
   }
-  .new-price-wrapper{
+  .new-price-wrapper {
     flex-direction: column;
     justify-content: center;
   }
-  .caret{
-   
-      width: 0;
-      height: 0;
-      border-top: 5px solid transparent;
-      border-left: 9px solid $muted-color;
-      border-bottom: 5px solid transparent;
-  
-    
+  .caret {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 9px solid $muted-color;
+    border-bottom: 5px solid transparent;
   }
 }
-.button-container{
+.button-container {
   .coupon-genrate-button {
     background: #af1462;
     color: #fff;
@@ -128,7 +123,7 @@ $muted-color:#ccc;
     border-radius: 6px;
     margin: 30px 0;
   }
-  .muted{
+  .muted {
     color: $muted-color;
     text-align: center;
   }
