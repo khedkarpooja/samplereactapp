@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.scss";
-import Constant from "./constant";
+import Main from "./main";
 
 function App() {
   return (
     <div className="App">
-      <Constant />
+    <Main/>
     </div>
   );
 }

@@ -1,36 +1,11 @@
 import React, { Component, Fragment } from "react";
+import { FLU_DRUGS } from "./constants";
 class Main extends Component {
   state = {
-    flu_drugs: [
-      {
-        type: "vaccine",
-        name: "fluzen quadravealent",
-        price_old: "$40.00",
-        price_new: "$40.00"
-      },
-      {
-        type: "vaccine",
-        name: "fluzen quadravealent",
-        price_old: "$40.00",
-        price_new: "$40.00"
-      },
-      {
-        type: "vaccine",
-        name: "fluzen quadravealent",
-        price_old: "$40.00",
-        price_new: "$40.00"
-      },
-      {
-        type: "vaccine",
-        name: "fluzen quadravealent",
-        price_old: "$40.00",
-        price_new: "$40.00"
-      }
-    ]
+    drugsList: FLU_DRUGS
   };
-
   render() {
-    const drugs = this.state.flu_drugs.map(drugs => {
+    const drugs = this.state.drugsList.map(drugs => {
       return (
         <div className="drugs-container">
           <div className="drugs-text">
@@ -61,7 +36,7 @@ class Main extends Component {
           <button className="coupon-genrate-button"> Get free coupon</button>
           <p className="muted">
             <sup>*</sup>
-            <span>avarge price</span>
+            <span>avarage price</span>
           </p>
         </div>
       </>
