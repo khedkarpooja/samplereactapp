@@ -18,7 +18,7 @@ class Main extends Component {
           </div>
 
           <div className=" new-price-wrapper drugs-sub-container">
-            <span>as low as</span>
+            <span className = "price-lable">as low as</span>
             <span className="new-price">
               {drugs.price_new} <sup className="muted">*</sup>
             </span>

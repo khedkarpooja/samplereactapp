@@ -8,17 +8,19 @@ $drugs-sub-width: 33.33%;
 $price-font: 30px;
 $border-0: 0;
 $muted-color: #ccc;
+
 @mixin primary-text($text-color) {
   color: $text-color;
 }
+
 @mixin flex-wrapper-center() {
   display: flex;
   justify-content: center;
   align-content: center;
-  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 @mixin drugs-container() {
   display: flex;
   justify-content: center;
@@ -27,29 +29,35 @@ $muted-color: #ccc;
   flex-wrap: wrap;
   flex-grow: 1;
 }
+
 .App {
   @include flex-wrapper-center();
   padding: 5%;
   margin: 10px;
   overflow: hidden;
+
   .main {
     padding: 10px;
     width: $screen-width;
     border: 5px solid #000000;
   }
+
   .drugs-heading {
     text-align: center;
     color: $secondary-color;
   }
 }
+
 .drugs-wrapper {
   @include flex-wrapper-center;
   padding: 50px;
+
   .drugs-container {
     border: $border;
     width: 49%;
     border-right: $border-0;
     border-bottom: $border-0;
+
     .drugs-sub-container {
       width: $drugs-sub-width;
       display: flex;
@@ -57,20 +65,25 @@ $muted-color: #ccc;
       padding: 5px;
       box-sizing: border-box;
     }
+
     &:nth-child(odd) {
       border-left: $border-0;
     }
+
     @include drugs-container();
+
     .badge {
       background: $muted-color;
       padding: 1px 8px;
       font-size: 10px;
       border-radius: 2px;
     }
+
     .drugs-name {
       font-size: 21px;
       text-transform: capitalize;
     }
+
     .old-price {
       font-size: $price-font;
       color: $muted-color;
@@ -78,19 +91,27 @@ $muted-color: #ccc;
       text-align: center;
       justify-content: space-between;
     }
+
     .new-price {
       font-size: $price-font;
       color: $secondary-color;
       font-weight: bold;
+
       .muted {
         color: $muted-color;
       }
     }
   }
+
   .new-price-wrapper {
     flex-direction: column;
     justify-content: center;
+
+    .price-lable {
+      color: $muted-color;
+    }
   }
+
   .caret {
     width: 0;
     height: 0;
@@ -99,9 +120,10 @@ $muted-color: #ccc;
     border-bottom: 5px solid transparent;
   }
 }
+
 .button-container {
   .coupon-genrate-button {
-    background: #af1462;
+    background: #DD446B;
     color: #fff;
     padding: 10px 68px;
     font-size: 20px;
@@ -109,6 +131,7 @@ $muted-color: #ccc;
     border-radius: 6px;
     margin: 30px 0;
   }
+
   .muted {
     color: $muted-color;
     text-align: center;
